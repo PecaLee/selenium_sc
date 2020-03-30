@@ -52,8 +52,5 @@ def get_raffle_page():
     for rounds in find_raffle_rounds:
         result = extract_raffle_data(rounds)
         results.append(result)
+    driver.close()
     return results
-
-
-print(get_raffle_page())
-driver.close()
